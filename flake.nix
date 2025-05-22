@@ -30,7 +30,7 @@
     packages.${system} = let
       pkgs = nixpkgs.legacyPackages.${system};
     in {
-      default = pkgs.buildGoModule {
+      gg-chatmix = pkgs.buildGoModule {
         name = packageName;
         src = pkgs.fetchFromGitHub {
           owner = "nilathedragon";
