@@ -52,7 +52,7 @@
 
     nixosModule = let 
       pkgs = nixpkgs.legacyPackages.${system};
-    in { self, config, lib, pkgs, ... }:
+    in { config, lib, pkgs, ... }:
     {
       options.services.gg-chatmix = {
         enable = lib.mkEnableOption "enable the gg-chatmix service";
