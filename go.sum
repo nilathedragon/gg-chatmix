@@ -1,0 +1,4 @@
+github.com/ARizzo35/gousb v0.0.0-20190510230359-2f943db6eb7a h1:vPXqAwxJyk4N5W80vV3GOYyInhYFgtJ8fpXdDZSwLf4=
+github.com/ARizzo35/gousb v0.0.0-20190510230359-2f943db6eb7a/go.mod h1:IF1RHoiM7DDHU4/7tyhPLrzv22uRU8HR6BbNIpW13sU=
+github.com/jfreymuth/pulse v0.1.1 h1:9WLNBNCijmtZ14ZJpatgJPu/NjwAl3TIKItSFnTh+9A=
+github.com/jfreymuth/pulse v0.1.1/go.mod h1:cpYspI6YljhkUf1WLXLLDmeaaPFc3CnGLjDZf9dZ4no=
