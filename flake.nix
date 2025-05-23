@@ -75,6 +75,14 @@
           };
           wantedBy = [ "default.target" ];
         };
+
+        services.udev.packages = [
+          (pkgs.writeTextFile {
+            name = "gg_chatmix_udev";
+            text = ''SUBSYSTEMS=="usb", ATTRS{idVendor}=="1038", ATTRS{idProduct}=="12e0", TAG+="uaccess", MODE="0666"'';
+            destination = "/etc/udev/rules.d/50-gg_chatmix.rules";
+          })
+        ];
       };
     };
   };
