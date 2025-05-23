@@ -50,6 +50,8 @@
       };
     };
 
+    defaultPackage.${system} = self.packages.${system}.gg-chatmix;
+
     nixosModule = let 
       pkgs = nixpkgs.legacyPackages.${system};
     in { config, lib, pkgs, ... }:
@@ -68,9 +70,10 @@
           description = "GG Chatmix daemon";
           serviceConfig = {
             Type = "exec";
-            ExecStart = "${config.services.gg-chatmix.package}/bin/cmd";
+            ExecStart = "${config.services.gg-chatmix.package}/bin/gg-chatmix";
             Restart = "always";
           };
+          wantedBy = [ "default.target" ];
         };
       };
     };
