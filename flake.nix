@@ -74,6 +74,7 @@
             Restart = "always";
           };
           wantedBy = [ "default.target" ];
+          requires = [ "pipewire.service" ];
         };
 
         services.udev.packages = [
