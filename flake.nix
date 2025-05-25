@@ -73,14 +73,13 @@
             ExecStart = "${config.services.gg-chatmix.package}/bin/gg-chatmix";
             Restart = "always";
           };
-          wantedBy = [ "default.target" ];
           requires = [ "pipewire.service" ];
         };
 
         services.udev.packages = [
           (pkgs.writeTextFile {
             name = "gg_chatmix_udev";
-            text = ''SUBSYSTEMS=="usb", ATTRS{idVendor}=="1038", ATTRS{idProduct}=="12e0", TAG+="uaccess", MODE="0666"'';
+            text = ''SUBSYSTEMS=="usb", ATTRS{idVendor}=="1038", ATTRS{idProduct}=="12e0", TAG+="uaccess", MODE="0666" SYSTEMD_USER_WANTS="gg-chatmix.service"'';
             destination = "/etc/udev/rules.d/50-gg_chatmix.rules";
           })
         ];
